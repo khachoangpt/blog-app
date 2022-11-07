@@ -27,7 +27,7 @@ const BlogDetail = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/blog/${id}`).then((res) => {
+    axios.get(`/api/blog/${id}`).then((res) => {
       setBlog(res.data);
     });
   }, [id]);
@@ -41,7 +41,9 @@ const BlogDetail = () => {
         theme="dark"
       />
       <div>
-        <Typography.Title style={{marginTop: "36px"}} level={1}>{blog.title}</Typography.Title>
+        <Typography.Title style={{ marginTop: "36px" }} level={1}>
+          {blog.title}
+        </Typography.Title>
         <img
           src={blog.image}
           alt="blog"

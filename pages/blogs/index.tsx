@@ -20,7 +20,7 @@ const Blogs: React.FC = () => {
   const [blogs, setBlogs] = useState<Data[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/blogs").then((res) => {
+    axios.get("/api/blogs").then((res) => {
       setBlogs(res.data);
     });
   }, []);
