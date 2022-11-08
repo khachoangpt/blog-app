@@ -29,7 +29,7 @@ const BlogDetail = () => {
   }, [id]);
 
   const handleRemove = async () => {
-    const res = await axios.get(`/api/delete-blog/${id}`);
+    const res = await axios.delete(`/api/delete-blog/${id}`);
     if (res.status === 200) {
       router.push("/blogs");
     }
