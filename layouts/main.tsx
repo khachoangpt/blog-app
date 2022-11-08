@@ -31,7 +31,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   };
 
   return (
-    <div>
+    <div style={{marginBottom: "40px"}}>
       <div style={{ maxWidth: "800px", margin: "auto" }}>
         <Menu
           onClick={handleClickMenu}
